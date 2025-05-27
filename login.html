@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Spotify</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1DB954, #191414);
+    }
+
+    .login {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .login:hover {
+      transform: scale(1.03);
+    }
+
+    .login h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1DB954;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #1DB954;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #191414;
+      box-shadow: 0 0 8px rgba(29, 185, 84, 0.5);
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      background-color: #1DB954;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #191414;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login">
+    <h1>Profile Login</h1>
+    <label>
+  <input type="text" name="username" id="username" placeholder="Enter Username">
+</label>
+<label>
+  <input type="password" name="password" id="password" placeholder="Enter Password">
+</label>
+
+    <button class="login-btn" onclick="showloginalert()">Login</button>
+  </div>
+
+</body>
+<script>
+  function showloginalert() {
+    const user = document.getElementById('username').value;
+    const pass =  document.getElementById('password').value;
+
+    if (user === "" || pass === ""){
+      alert("Please enter your username and password")
+    }
+    else{
+      alert("login successfull !");
+      window.location.href = "index.html";
+    }
+  }
+</script>
+</html>

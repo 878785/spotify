@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify - Motivational AI Music</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">Spotify</a>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Browse</a></li>
+        <li><a href="#">Premium</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search for songs or playlists...">
+      <button id="clear-search" style="display: none;">✖</button>
+    </div>
+    <button class="login"><a href="login.html">Login</a></button>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to Spotify</h1>
+      <p>Discover AI-generated music just for you</p>
+      <a href="https://open.spotify.com/" class="hero-btn">🎵 Start Listening</a>
+    </div>
+  </section>
+
+  <section class="music-section">
+    <h2>🔥 Featured Playlists</h2>
+    <div class="playlist-container" id="playlist-container">
+      <!-- Playlists will be injected here by JavaScript -->
+    </div>
+  </section>
+
+  <div class="player-bar" id="player-bar" style="display: none;">
+    <div class="player-content">
+      <div class="song-info">
+        <span id="current-song-title">No song selected</span>
+        <span id="current-playlist-title"></span>
+      </div>
+      <div class="player-controls">
+        <button id="prev-btn" class="control-btn">⏮</button>
+        <button id="play-pause-btn" class="control-btn">▶</button>
+        <button id="next-btn" class="control-btn">⏭</button>
+      </div>
+      <div class="progress-container">
+        <span id="current-time">0:00</span>
+        <input type="range" id="progress-bar" min="0" max="100" value="0">
+        <span id="duration">3:00</span>
+      </div>
+    </div>
+  </div>
+
+  <footer style="text-align:center; padding: 20px; background: #191414; color: #aaa;">
+    © 2025 Spotify Clone by Sumit Mishra. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
